@@ -1,0 +1,11 @@
+<div class="container animated bounceInUp">
+    <div class="row card-deck">
+        <div class="card bg-light mb-3 col-md-6 margin-top-30" *ngFor="let datos of lineChartData; let i = index">
+            <div class="card-body">
+                <div style="display: block;">
+                    <canvas class="" baseChart width="400" height="400" [colors]="color[i]" [datasets]="datos" [labels]="lineChartLabels" [options]="lineChartOptions" chartType="line"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.fondo {
+    background-image: url("../../../assets/imagenes/imglogin.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.tamaño {
+    position: absolute;
+    color: #000;
+    border-radius: 5px;
+    list-style-type: none;
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+}
