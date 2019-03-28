@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { getClosureSafeProperty } from '@angular/core/src/util/property';
+import swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,40 +9,30 @@ import { getClosureSafeProperty } from '@angular/core/src/util/property';
 })
 export class DashboardComponent implements OnInit {
 
-
-  public lineChartData: Array<any>;
-  public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  public lineChartOptions: any = {
-    responsive: true
-  };
-
   public color = [];
 
-  constructor() {
-    this.lineChartData = [
-      [{data: [65, 59, 80, 81, 56, 55, 40], label: 'Temperatura'}],
-      [{data: [23, 79, 20, 41, 56, 25, 80], label: 'Humedad'}]
-    ];
-    // tslint:disable-next-line:forin
-    for ( const i in this.lineChartData ) {
-      this.color[i] = this.getColor();
-    }
-   }
+  constructor(
+  ) {
+    swal({
+      title: 'Gracias por visitarme <i class="far fa-grin"></i>',
+      width: 600,
+      background: '#FFFFFF',
+      backdrop: `
+        rgba(0,0,0,0.4)
+        url("/assets/images/fondo2.gif")
+        center left
+        no-repeat
+      `,
+      type: 'success',
+      confirmButtonText: 'Pulsame'
+    });
+
+  }
 
   ngOnInit() {
   }
 
-   getColor() {
-     const color: Array<any> = [
-        {
-        backgroundColor: `rgba(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255},0.2)`,
-        borderColor:  `rgba(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255},1)`,
-        pointBackgroundColor:  `rgba(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255},1)`,
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor:  `rgba(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255},0.8)`
-        }
-      ];
-    return color;
-    }
+  external() {
+    window.open('https://github.com/Semllo?tab=repositories', '_blank');
+  }
 }

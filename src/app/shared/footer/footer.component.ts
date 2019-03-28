@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { WebsocketsService } from 'src/app/services/socketIO/websockets.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +8,6 @@ import { WebsocketsService } from 'src/app/services/socketIO/websockets.service'
 export class FooterComponent implements OnInit {
 
   constructor(
-    public wsService: WebsocketsService
   ) { }
 
   ngOnInit() {

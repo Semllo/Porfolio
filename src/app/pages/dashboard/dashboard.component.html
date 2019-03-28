@@ -1,11 +1,152 @@
-<div class="container animated bounceInUp">
-    <div class="row card-deck">
-        <div class="card bg-light mb-3 col-md-6 margin-top-30" *ngFor="let datos of lineChartData; let i = index">
-            <div class="card-body">
-                <div style="display: block;">
-                    <canvas class="" baseChart width="400" height="400" [colors]="color[i]" [datasets]="datos" [labels]="lineChartLabels" [options]="lineChartOptions" chartType="line"></canvas>
+<body id="top">
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- Top Background Image Wrapper -->
+    <div class="bgded" style="background-image:url('/assets/images/yo1.png');">
+        <!-- ################################################################################################ -->
+
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear">
+                <!-- ################################################################################################ -->
+                <div id="logo" class="fl_left">
+                    <h1>
+                        <a [routerLink]="['/dashboard']">Angular porfolio</a>
+                    </h1>
                 </div>
-            </div>
+                <nav id="mainav" class="fl_right navbar navbar-expand-lg">
+                    <ul class="clear">
+                        <li class="active"><a [routerLink]="['/dashboard']">Inicio</a></li>
+                        <li><a class="drop" href="#">Paginas</a>
+                            <ul>
+                                <li><a [routerLink]="['/curriculum']"><i class="fa fa-address-card"></i> Mi currículum</a></li>
+                                <li><a [routerLink]="['/aboutme']"><i class="fa fa-user"></i>  Sobre mí</a></li>
+                                <li><a [routerLink]="['/projects']"><i class="fas fa-project-diagram"></i> Mis proyectos</a></li>
+                                <li><a [routerLink]="['/courses']"><i class="fas fa-book"></i> Mis cursos</a></li>
+                                <li><a (click)="external()" [routerLink]="['/dashboard']"><i class="fa fa-github"></i> Mi GitHub</a></li> 
+                            </ul>
+                        </li>
+                        <li><a class="drop" href="#"><i class="fas fa-globe-africa"></i> Languaje</a>
+                            <ul>
+                                <li><a [routerLink]="" class="center"> <img src="/assets/images/en.png" alt=""> Ingles</a></li>
+                                <li><a [routerLink]="" class="center"> <img src="/assets/images/es.png" alt=""> Español</a></li>
+                            </ul>
+                        </li>
+                        <!--<li><a class="drop" href="#">Dropdown</a>
+                            <ul>
+                                <li><a href="#">Level 2</a></li>
+                                <li><a class="drop" href="#">Level 2 + Drop</a>
+                                    <ul>
+                                        <li><a href="#">Level 3</a></li>
+                                        <li><a href="#">Level 3</a></li>
+                                        <li><a href="#">Level 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Level 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Link Text</a></li>
+                        <li><a href="#">Link Text</a></li> -->
+                    </ul>
+                </nav>
+                <!-- ################################################################################################ -->
+            </header>
         </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <section id="pageintro" class="hoc clear">
+            <div>
+                <!-- ################################################################################################ -->
+                <h2 class="heading" style="color:#FFFFFF">Hola,<br>
+                    <strong>Soy Marc Semper Lloret</strong></h2>
+                <footer>
+                    <!--<ul class="nospace inline pushright">
+                        <li><a class="btn" href="#">Suscipit</a></li>
+                        <li><a class="btn" href="#">Lobortis</a></li>
+                    </ul>-->
+                </footer>
+                <!-- ################################################################################################ -->
+            </div>
+        </section>
+        <!-- ################################################################################################ -->
     </div>
-</div>
+    <!-- End Top Background Image Wrapper -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <main class="hoc container clear btmpad-none">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+           
+            <ul class="nospace group center btmspace-80">
+                <li class="one_third first">
+                    <article><i class="btmspace-30 fa fa-3x fa-android"></i>
+                        <h6 class="heading font-x1">Otras habilidades de desarrollo</h6>
+                        <p class="btmspace-30"> Un poco de todo.</p><br>
+                        <footer><a class="btn" [routerLink]="['/prga']">Read More &raquo;</a></footer>
+                    </article>
+                </li>
+
+                <li class="one_third">
+                    <article><i class="btmspace-30 fa fa-3x fa-code"></i>
+                        <h6 class="heading font-x1">Full Stacks Devoloper</h6>
+                        <p class="btmspace-30">Principalmente con MEAN stacks.</p><br>
+                        <footer><a class="btn" [routerLink]="['/fullstacks']">Read More &raquo;</a></footer>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article><i class=" btmspace-30 fas fa-3x fa-desktop"></i>
+                        <h6 class="heading font-x1">Algunas Tareas que puedo hacer</h6>
+                        <p class="btmspace-30">Crear un plan de negocio, AWS, gestionar la red local ...</p>
+                        <footer><a class="btn" [routerLink]="['/other']">Read More &raquo;</a></footer>
+                    </article>
+                </li>
+            </ul>
+            <figure><img src="/assets/images/yo7.jpg" alt=""></figure>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper bgded overlay coloured">
+        <section class="hoc container clear">
+            <!-- ################################################################################################ -->
+            <div class="sectiontitle center">
+                <h6 class="heading">El reto estratégico</h6><br>
+                <p>"El buen estratega es aquel que sabe convertir una amenaza en una oportunidad, mientras que el malo es el que deja pasar ésta, porque a continuación se convertirá en una nueva amenaza"</p>
+            </div>
+            <ul class="nospace group infoboxes">
+                <li class="one_quarter first">
+                    <article class="infobox"><i class="fa fa-user"></i>
+                        <p><a [routerLink]="['/aboutme']">Sobre mí</a></p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article class="infobox"><i class="fa fa-address-card"></i>
+                        <p><a [routerLink]="['/curriculum']">Mi curriculum</a></p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article class="infobox"><i class="fa fa-book"></i>
+                        <p><a [routerLink]="['/learning']">Que estoy aprendiendo</a></p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article class="infobox"><i class="fa fa-github"></i>
+                        <p><a (click)="external()" [routerLink]="['/dashboard']">Algunos proyectos</a></p> 
+                    </article>
+                </li>
+            </ul>
+            <!-- ################################################################################################ -->
+            <div class="clear"></div>
+        </section>
+    </div>
+
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->

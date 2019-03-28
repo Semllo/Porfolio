@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WebsocketsService } from '../services/socketIO/websockets.service';
+import { Router } from '@angular/router';
+declare function init_plugins();
 
 @Component({
   selector: 'app-pages',
@@ -9,10 +10,11 @@ import { WebsocketsService } from '../services/socketIO/websockets.service';
 export class PagesComponent implements OnInit {
 
   constructor(
-    public wsService: WebsocketsService
+    private router: Router
   ) { }
 
   ngOnInit() {
+    init_plugins();
   }
 
 }

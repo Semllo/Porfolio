@@ -1,27 +1,39 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['/dashboard']">Monitor</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['/cremoto']">Control remoto</a>
-            </li>
-        </ul>
-        <span class="dropdown">
-            <button class="dropdown-toggle btn btn-md btn-outline-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Mis datos
-            </button>
-            <div class="dropdown-menu dropdown-menu-right animated fadeInRight" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" [routerLink]="['/user']"  routerLinkActive="active" ><i class="fas fa-user"></i> Datos personales</a>
-                <a class="dropdown-item" [routerLink]="['/estadisticas']" routerLinkActive="active"> <i class="fas fa-chart-line"></i> Estadisticas</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" [routerLink]="['/login']" routerLinkActive="active"><i class="fas fa-power-off"></i> Logout</a>
-            </div>
-        </span>
-    </div>
-</nav>
+<div class="wrapper row1">
+    <header id="header" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div id="logo" class="fl_left">
+            <h1>
+                <a href="index.html"></a>
+            </h1>
+        </div>
+        <nav id="mainav" class="fl_right">
+            <ul class="clear">
+                <li class="active"><a [routerLink]="['/dashboard']">Inicio</a></li>
+                <li><a class="drop" href="#">Paginas</a>
+                    <ul>
+                        <li><a [routerLink]="['/curriculum']">Mi currículum</a></li>
+                        <li><a [routerLink]="['/aboutme']">Sobre mí</a></li>
+                        <li><a [routerLink]="['/projects']">Mis proyectos</a></li>
+                        <li><a [routerLink]="['/courses']">Mis cursos</a></li>
+                    </ul>
+                </li>
+                <!--<li><a class="drop" href="#">Dropdown</a>
+                    <ul>
+                        <li><a href="#">Level 2</a></li>
+                        <li><a class="drop" href="#">Level 2 + Drop</a>
+                            <ul>
+                                <li><a href="#">Level 3</a></li>
+                                <li><a href="#">Level 3</a></li>
+                                <li><a href="#">Level 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Level 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Link Text</a></li>
+                <li><a href="#">Link Text</a></li> -->
+            </ul>
+        </nav>
+        <!-- ################################################################################################ -->
+    </header>
+</div>
